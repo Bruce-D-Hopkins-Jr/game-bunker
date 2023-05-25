@@ -1,6 +1,6 @@
 //Array of Strings which are the names of list Items for navbar
-let list = ['About Me', 'Sumo Ball', 'Memory', 'Farm Feeding Frenzy']
-let anchor_list = ['about-me', 'sumo', 'memory', 'farm']
+let list = ['About Me', 'Sumo Ball', 'Dine and Dash', 'Farm Feeding Frenzy']
+let anchor_list = ['about-me', 'sumo', 'dad', 'farm']
 
 //Store the creation of list items in a variable
 let nav = document.querySelector('ul')
@@ -31,13 +31,13 @@ for (i = 0; i < list.length; i++) {
 //Variables that store anchor elements with a specific id name
 let about_me_link = document.getElementById('about-me-link')
 let sumo_link = document.getElementById('sumo-link')
-let memory_link = document.getElementById('memory-link')
+let dad_link = document.getElementById('dad-link')
 let farm_link = document.getElementById('farm-link')
 
 //Variables that store the sections on the page
 let about_me_section = document.getElementById('about-me-section')
 let sumo_section = document.getElementById('sumo-section')
-let memory_section = document.getElementById('memory-section')
+let dad_section = document.getElementById('dad-section')
 let farm_section = document.getElementById('farm-section')
 
 //function that clears active state for navbar
@@ -51,7 +51,7 @@ function clear_nav() {
 function clear_section() {
   about_me_section.removeAttribute('class')
   sumo_section.removeAttribute('class')
-  memory_section.removeAttribute('class')
+  dad_section.removeAttribute('class')
   farm_section.removeAttribute('class')
 }
 
@@ -77,12 +77,12 @@ sumo_link.addEventListener('click', function (event) {
 })
 
 //Sets anchor class as active to highlight section, removes active class from other anchor elements
-memory_link.addEventListener('click', function (event) {
+dad_link.addEventListener('click', function (event) {
   event.preventDefault()
 
   clear_nav()
 
-  memory_link.setAttribute('class', 'active')
+  dad_link.setAttribute('class', 'active')
   window.scrollTo({ top: 2201, behavior: 'smooth' })
 })
 
@@ -112,10 +112,10 @@ window.addEventListener('scroll', function () {
     sumo_section.setAttribute('class', 'active-section')
   } else if (window.scrollY > 2200 && window.scrollY < 3044) {
     clear_nav()
-    memory_link.setAttribute('class', 'active')
+    dad_link.setAttribute('class', 'active')
 
     clear_section()
-    memory_section.setAttribute('class', 'active-section')
+    dad_section.setAttribute('class', 'active-section')
   } else if (window.scrollY > 3044) {
     clear_nav()
     farm_link.setAttribute('class', 'active')

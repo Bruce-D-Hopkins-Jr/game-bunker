@@ -139,12 +139,12 @@ figure {
   border: 4px dashed greenyellow;
 }
 
-#memory-section {
+#dad-section {
   border: 4px dashed black;
   margin-bottom: 10px;
 }
 
-#memory-section.active-section {
+#dad-section.active-section {
   border: 4px dashed greenyellow;
 }
 
@@ -185,7 +185,7 @@ figure {
   max-width: 850px;
 }
 
-.memory-photo {
+.dad-photo {
   width: 100%;
   max-width: 850px;
 }
